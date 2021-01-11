@@ -1,4 +1,4 @@
-package ej56;
+package com.javisoft.ejercicios52.ej56;
 
 public class Rectangle {
     private double base;

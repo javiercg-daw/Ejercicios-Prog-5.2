@@ -1,9 +1,9 @@
-package ej58;
+package com.javisoft.ejercicios52.ej58;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Main {
+public class Ej58 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Time myTime;

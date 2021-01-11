@@ -1,4 +1,4 @@
-package ej58;
+package com.javisoft.ejercicios52.ej58;
 
 public class Time {
     private int hour;

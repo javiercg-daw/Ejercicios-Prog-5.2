@@ -1,4 +1,4 @@
-package ej57;
+package com.javisoft.ejercicios52.ej57;
 
 public class Car {
     private String color;

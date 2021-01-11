@@ -1,6 +1,6 @@
-package ej59;
+package com.javisoft.ejercicios52.ej59;
 
-public class Main {
+public class Ej59 {
     public static void main(String[] args) {
         Person javi = new Person("12345678W");
         Account mainAccount = new Account("000", 0.0);

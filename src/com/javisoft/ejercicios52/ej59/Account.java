@@ -1,4 +1,4 @@
-package ej59;
+package com.javisoft.ejercicios52.ej59;
 
 public class Account {
     private String accountID;
