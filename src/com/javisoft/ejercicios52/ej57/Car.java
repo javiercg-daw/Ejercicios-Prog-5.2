@@ -2,10 +2,10 @@ package com.javisoft.ejercicios52.ej57;
 
 public class Car {
     private String color;
-    private String brand;
-    private String model;
+    private final String brand;
+    private final String model;
     private int hp;
-    private int doors;
+    private final int doors;
     private String plate;
 
     public Car(String color, String brand, String model, int hp, int doors, String plate) {
@@ -29,16 +29,9 @@ public class Car {
         return brand;
     }
 
-    public void setBrand(String brand) {
-        this.brand = brand;
-    }
 
     public String getModel() {
         return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
     }
 
     public int getHp() {
@@ -61,9 +54,6 @@ public class Car {
         return doors;
     }
 
-    public void setDoors(int doors) {
-        this.doors = doors;
-    }
 
     @Override
     public String toString() {

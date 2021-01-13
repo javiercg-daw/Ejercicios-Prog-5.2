@@ -4,6 +4,8 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Ej58 {
+
+    // TODO: simplify
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Time myTime;

@@ -1,9 +1,9 @@
 package com.javisoft.ejercicios52.ej58;
 
 public class Time {
-    private int hour;
-    private int minute;
-    private int second;
+    private final int hour;
+    private final int minute;
+    private final int second;
 
     public Time(int hour, int minute, int second) {
         if (hour > 23 || minute > 59 || second > 59 || hour < 0 || minute < 0 || second < 0) {

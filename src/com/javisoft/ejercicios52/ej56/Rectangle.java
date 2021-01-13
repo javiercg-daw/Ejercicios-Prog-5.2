@@ -1,8 +1,8 @@
 package com.javisoft.ejercicios52.ej56;
 
 public class Rectangle {
-    private double base;
-    private double height;
+    private final double base;
+    private final double height;
 
     public Rectangle(double base, double height) {
         this.base = base;
@@ -10,7 +10,7 @@ public class Rectangle {
     }
 
     public double getArea() {
-        return this.base *this.height;
+        return this.base * this.height;
     }
 
     public double getPerimeter() {

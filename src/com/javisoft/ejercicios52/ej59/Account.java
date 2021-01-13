@@ -1,7 +1,7 @@
 package com.javisoft.ejercicios52.ej59;
 
 public class Account {
-    private String accountID;
+    private final String accountID;
     private double balance;
 
     public Account(String accountID, double balance) {
@@ -16,7 +16,6 @@ public class Account {
     public void setBalance(double balance) {
         this.balance = balance;
     }
-
 
     public void addToBalance(double amount) {
         this.setBalance(this.getBalance() + amount);

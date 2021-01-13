@@ -3,7 +3,7 @@ package com.javisoft.ejercicios52.ej59;
 import java.util.ArrayList;
 
 public class Person {
-    private String personID;
+    private final String personID;
     private ArrayList<Account> accounts;
 
     public Person(String personID) {

@@ -10,6 +10,11 @@ public class Ej57 {
         Car functionalCar = new Car("white", "Toyota", "Corolla", 120, 4, "0000ZZZ");
         Car[] carArr = {kitt, niceCar, functionalCar};
 
-        Arrays.stream(carArr).forEach(car -> System.out.println(car.toString()));
+
+        Arrays.stream(carArr).forEach(System.out::println);
+        System.out.println();
+
+        niceCar.setColor("yellow");
+        Arrays.stream(carArr).forEach(System.out::println);
     }
 }
