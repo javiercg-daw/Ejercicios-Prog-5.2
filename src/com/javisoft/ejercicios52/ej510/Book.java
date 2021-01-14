@@ -13,9 +13,9 @@ public class Book {
         this.rating = rating;
 
         if (this.rating > 10.0) {
-            this.rating = 10;
-        } else if (this.rating < 0) {
-            this.rating = 0;
+            this.rating = 10.0;
+        } else if (this.rating < 0.0) {
+            this.rating = 0.0;
         }
     }
 

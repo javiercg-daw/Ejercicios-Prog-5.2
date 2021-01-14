@@ -15,6 +15,7 @@ public class Ej57 {
         System.out.println();
 
         niceCar.setColor("yellow");
+        functionalCar.setColor("black");
         Arrays.stream(carArr).forEach(System.out::println);
     }
 }

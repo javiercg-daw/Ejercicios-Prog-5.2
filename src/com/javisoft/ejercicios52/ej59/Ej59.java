@@ -10,14 +10,10 @@ public class Ej59 {
 
         mainAccount.addToBalance(1100.0);
         secondaryAccount.removeFromBalance(750.0);
-        printStatus(javi);
+        System.out.println(javi.status());
+        
+        mainAccount.pay(secondaryAccount, 800.0);
+        System.out.println(javi.status());
 
-        mainAccount.pay(secondaryAccount, 750.0);
-        printStatus(javi);
-    }
-
-    private static void printStatus(Person person){
-        String defaulter = person.isDefaulter() ? "Defaulter" : "Not a defaulter";
-        System.out.println(defaulter);
     }
 }

@@ -11,15 +11,13 @@ public class Person {
         this.accounts = new ArrayList<>();
     }
 
-    public boolean addAccount(Account account) {
+    public void addAccount(Account account) {
         if (this.accounts.contains(account)) {
-            return false;
+            return;
         }
         if (accounts.size() < 3) {
             accounts.add(account);
-            return true;
         }
-        return false;
     }
 
     public boolean isDefaulter() {
@@ -31,4 +29,7 @@ public class Person {
         return false;
     }
 
+    public String status() {
+        return isDefaulter() ? "Defaulter" : "Non-defaulter";
+    }
 }

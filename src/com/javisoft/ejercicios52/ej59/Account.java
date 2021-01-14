@@ -18,11 +18,11 @@ public class Account {
     }
 
     public void addToBalance(double amount) {
-        this.setBalance(this.getBalance() + amount);
+        setBalance(getBalance() + amount);
     }
 
     public void removeFromBalance(double amount) {
-        this.setBalance(this.getBalance() - amount);
+        setBalance(getBalance() - amount);
     }
 
     public void pay(Account recipient, double amount) {

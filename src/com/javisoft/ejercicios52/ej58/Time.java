@@ -25,8 +25,8 @@ public class Time {
 
     @Override
     public String toString() {
-        return this.hour + "h " +
-                this.minute + "m " +
-                this.second + "s";
+        return hour + "h " +
+                minute + "m " +
+                second + "s";
     }
 }
