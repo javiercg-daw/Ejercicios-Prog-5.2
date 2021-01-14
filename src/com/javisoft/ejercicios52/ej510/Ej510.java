@@ -6,14 +6,14 @@ public class Ej510 {
         Book lotr = new Book("The Lord of the Rings", "J. R. R. Tolkien", 1178, 11.0);
         Book harry = new Book("Harry Potter", "J. K. Rowling", 123, 4.5);
 
-        myCollection.addBook(lotr);
-        myCollection.addBook(harry);
+        myCollection.add(lotr);
+        myCollection.add(harry);
 
         myCollection.removeBookByAuthor("J. K. Rowling");
         myCollection.removeBookByTitle("The Lord of the Rings");
 
-        myCollection.addBook(lotr);
+        myCollection.add(lotr);
 
-        myCollection.printCollection();
+        System.out.println(myCollection.toString());
     }
 }

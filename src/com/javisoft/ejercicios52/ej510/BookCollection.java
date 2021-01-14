@@ -1,88 +1,32 @@
 package com.javisoft.ejercicios52.ej510;
 
+import com.javisoft.ejercicios52.JaviArray;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
 public class BookCollection {
-    private Book[] books;
+    private JaviArray<Book> books;
 
     public BookCollection(int length) {
-        this.books = new Book[length];
-    }
-
-    private int indexOf(Book book) {
-        this.books = sorted(this.books);
-        for (int i = 0; i < this.books.length; i++) {
-            if (this.books[i] == book) {
-                return i;
-            }
-        }
-        return -1;
-    }
-
-    private boolean contains(Book book) {
-        return this.indexOf(book) != -1;
-    }
-
-
-    private Book[] sorted(Book[] array) {
-        Book[] newArray = new Book[array.length];
-        int i = 0;
-        for (Book b : array) {
-            if (b != null) {
-                newArray[i] = b;
-                i++;
-            }
-        }
-        return newArray;
-    }
-
-    private int firstEmptyIndex() {
-        this.books = sorted(this.books);
-        for (int i = 0; i < this.books.length; i++) {
-            if (this.books[i] == null) {
-                return i;
-            }
-        }
-        return -1;
-    }
-
-    private int size() {
-        int firstNull = this.firstEmptyIndex();
-        return (firstNull == -1) ? this.books.length : (firstNull - 1);
-    }
-
-    public boolean addBook(Book book) {
-        int firstNull = this.firstEmptyIndex();
-        if (firstNull == -1 || this.contains(book)) {
-            return false;
-        }
-
-        this.books[firstNull] = book;
-        return true;
+        this.books = new JaviArray<>(length);
     }
 
     public void removeBookByAuthor(String author) {
-        this.books = sorted(
-                Arrays.stream(this.books)
-                        .filter(Objects::nonNull)
-                        .filter(b -> !(b.getAuthor().equals(author)))
-                        .toArray(arr -> new Book[this.books.length])
-        );
+        books.removeItemByProperty(book -> book.getAuthor().equals(author));
     }
 
     public void removeBookByTitle(String title) {
-        this.books = sorted(
-                Arrays.stream(this.books)
-                        .filter(Objects::nonNull)
-                        .filter(b -> !(b.getTitle().equals(title)))
-                        .toArray(arr -> new Book[this.books.length])
-        );
+        books.removeItemByProperty(book -> book.getTitle().equals(title));
+    }
+
+    public void add(Book book) {
+        books.add(book);
     }
 
     public void printBestAndWorst() {
-        List<Book> bookList = Arrays.asList(this.books);
+        List<Book> bookList = Arrays.asList(this.books.toArray());
         if (bookList.isEmpty()) {
             return;
         }
@@ -102,8 +46,8 @@ public class BookCollection {
         System.out.println("Best:\t" + best.toString() + "\nWorst:\t" + worst.toString());
     }
 
-    public void printCollection() {
-        Arrays.stream(this.books).filter(Objects::nonNull).forEach(System.out::println);
+    public String toString() {
+        return this.books.toString();
     }
 
 }
